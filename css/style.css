@@ -679,6 +679,11 @@ body{
     text-decoration: none;
 }
 
+.team .row .card .info .icons .fa-envelope:hover, .footer .icons .fa-envelope:hover{
+    color: #f80000;
+    text-decoration: none;
+}
+
 .team .row .card .info .icons .fa-instagram:hover, .footer .icons .fa-instagram:hover{
     color: #C13584;
     text-decoration: none;
