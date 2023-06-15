@@ -311,7 +311,7 @@
         </div>
     </div>
 
-    
+
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/jquery/jquery-migrate.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -426,30 +426,38 @@
                 <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="Contact number"
                     maxlength="10" class="contact-form-phone">
                 <input type="email" id="email" name="email" placeholder="Email" class="contact-form-email" required>
-                <textarea placeholder="Your Message" id="message" name="message" class="contact-form-txtarea" required></textarea>
+                <textarea placeholder="Your Message" id="message" name="message" class="contact-form-txtarea"
+                    required></textarea>
                 <input type="submit" value="Submit" name="submit" class="contact-form-btn">
+                <input type="button" value="Clear Form" onclick="clearForm()" class="contact-form-btn">
             </form>
         </div>
     </div>
 
-      <script>
+    <script>
         function prepareEmailBody(event) {
-          event.preventDefault();
-          
-          const name = document.getElementById('name').value;
-          const phone = document.getElementById('phone').value;
-          const email = document.getElementById('email').value;
-          const message = document.getElementById('message').value;
-          
-          const body = `Name: ${name}%0D%0APhone: ${phone}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
-          const emailLink = `mailto:thoughtsidea.projects@gmail.com?subject=New Inquiry&body=${body}`;
-          
-          window.location.href = emailLink;
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            const body = `Name: ${name}%0D%0APhone: ${phone}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
+            const emailLink = `mailto:thoughtsidea.projects@gmail.com?subject=New Inquiry&body=${body}`;
+
+            window.location.href = emailLink;
         }
-      </script>
-      
-      
-    
+        function clearForm() {
+            document.getElementById('name').value = '';
+            document.getElementById('phone').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('message').value = '';
+        }
+    </script>
+
+
+
     <section class="faq">
         <h1 class="heading" style="margin-top: -2rem; color: #00bfff;" id="faq">FAQ</h1>
         <div class="row">
