@@ -54,6 +54,7 @@
     </section>
 
     <section id="about" class="about">
+        <p></p>
         <h1 class="heading">about us</h1>
         <div class="row">
             <div class="content">
@@ -67,6 +68,7 @@
         <div class="container">
             <div class="row">
                 <div class="section-head col-sm-12" id="service">
+                    <p></p>
                     <h1>Our Services</h1>
                     <p>Customized project solutions tailored to meet your specific academic requirements.<br>
                         Reliable and efficient project execution for students across all departments.</p>
@@ -157,12 +159,16 @@
             </div>
         </div>
     </section>
+    <section id="portfolio">
+        <p style="margin: 20px;"><br></p>
+    </section>
+
 
     <div class="pt-5 pb-5">
         <div class="container">
             <div class="row">
                 <div class="section-head-1 col-sm-12" style="text-align: center;">
-                    <h4 style="margin-top: -5rem;" id="portfolio"><span>Our</span> Projects</h4>
+                    <h4 style="margin-top: -5rem;"><span>Our</span> Projects</h4>
 
                     <p>At our project center, we specialize in delivering high-quality projects to students. Our focus
                         is on providing custom project solutions that meet their specific requirements, ensuring their
@@ -204,6 +210,27 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="clients mt-100">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Portfolio</h2>
+                <p> "We don't just create projects, we shape your academic success." </p>
+            </div>
+            <div class="owl-carousel clients-carousel">
+                <img loading="lazy" src="./images/weatherMonitor1.jpg" style="padding: 10px;">
+                <img loading="lazy" src="./images/homeAuto1.png" style="padding: 10px;">
+                <img loading="lazy" src="./images/roboArm.jpg" style="padding: 10px;">
+                <img loading="lazy" src="./images/rpi survei1.jpg" style="padding: 10px;">
+                <img loading="lazy" src="./images/patient.jpg" style="padding: 10px;">
+                <img loading="lazy" src="./images/Patrolling-Robot.jpg" style="padding: 10px;">
+                <img loading="lazy" src="./images/esp1car.jpg" style="padding: 10px;">
+                <img loading="lazy" src="./images/espWeather2.jpg" style="padding: 10px;">
+                <img loading="lazy" src="./images/espirrigtion3.jpg" style="padding: 10px;">
+            </div>
+            <p><br></p>
         </div>
     </div>
 
@@ -284,26 +311,7 @@
         </div>
     </div>
 
-    <div class="clients mt-100">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Portfolio</h2>
-                <p> "We don't just create projects, we shape your academic success." </p>
-            </div>
-            <div class="owl-carousel clients-carousel">
-                <img loading="lazy" src="./images/weatherMonitor1.jpg" style="padding: 10px;">
-                <img loading="lazy" src="./images/homeAuto1.png" style="padding: 10px;">
-                <img loading="lazy" src="./images/roboArm.jpg" style="padding: 10px;">
-                <img loading="lazy" src="./images/rpi survei1.jpg" style="padding: 10px;">
-                <img loading="lazy" src="./images/patient.jpg" style="padding: 10px;">
-                <img loading="lazy" src="./images/Patrolling-Robot.jpg" style="padding: 10px;">
-                <img loading="lazy" src="./images/esp1car.jpg" style="padding: 10px;">
-                <img loading="lazy" src="./images/espWeather2.jpg" style="padding: 10px;">
-                <img loading="lazy" src="./images/espirrigtion3.jpg" style="padding: 10px;">
-            </div>
-        </div>
-    </div>
-    <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
+    
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/jquery/jquery-migrate.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -312,6 +320,7 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+
 
     <section class="team" style="margin-top: 7rem;">
         <h1 class="heading" style="margin-top: -1.5rem;" id="team">our team</h1>
@@ -400,27 +409,6 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="row">
-            <div class="card">
-                <div class="image">
-                    <img loading="lazy" src="./images/testi2.png" alt="Team member 1">
-                </div>
-                <div class="info">
-                    <h3>Menaka K</h3>
-                    <span>Web Developer</span>
-                    <div class="icons">
-                        <a href="https://www.facebook.com/ManiS.2603" class="fab fa-facebook-f"></a>
-                        <a href="https://twitter.com/login" class="fab fa-twitter"></a>
-                        <a href="https://instagram.com/daredevil_mani?igshid=NGExMmI2YTkyZg=="
-                            class="fab fa-instagram"></a>
-                        <a href="https://www.linkedin.com/in/mani-s-26032002mani" class="fab fa-linkedin"></a>
-                        <a
-                            href="mailto:thoughtsidea.projects@gmail.com?subject=Inquiry%20Regarding%20Services&body=Name:%20%0D%0APhone:%20%0D%0AQuery:%20"><i
-                                class="fa fa-envelope"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div> -->
     </section>
 
     <section id="contact" class="contact">
@@ -433,7 +421,7 @@
                 width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
         <div class="contact-form">
-            <form action="./contactme.php" method="POST">
+            <form action="mailto:thoughtsidea.projects@gmail.com" method="POST">
                 <input type="text" name="name" placeholder="Name" class="contact-form-txt" required>
                 <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="Contact number"
                     maxlength="10" class="contact-form-phone">
@@ -444,6 +432,20 @@
         </div>
     </div>
 
+    <!-- <form action="mailto:thoughtsidea.projects@gmail.com" method="POST" enctype="text/plain"> -->
+        <!-- <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br>
+        
+        <input type="submit" value="Submit">
+      </form> -->
+      
+    
     <section class="faq">
         <h1 class="heading" style="margin-top: -2rem; color: #00bfff;" id="faq">FAQ</h1>
         <div class="row">
