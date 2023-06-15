@@ -1079,11 +1079,11 @@ body{
             margin-right: 2rem;
         }
         
+        
         .button {
-   
             padding: 1em 0.7em;
              border: none;
-             border-radius: 5px;
+             border-radius: 20%;
              font-weight: bold;
              letter-spacing: 5px;
              text-transform: uppercase;
