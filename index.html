@@ -444,22 +444,6 @@
     </div>
 
     <script>
-        function searchWebsite() {
-            var searchQuery = document.getElementById("search-input").value;
-            if (searchQuery) {
-                if (window.find && window.getSelection) {
-                    document.designMode = "on";
-                    var sel = window.getSelection();
-                    sel.collapse(document.body, 0);
-                    while (window.find(searchQuery)) {
-                        document.execCommand("HiliteColor", false, "yellow");
-                        sel.collapseToEnd();
-                    }
-                    document.designMode = "off";
-                }
-            }
-        }
-
         function prepareEmailBody(event) {
             event.preventDefault();
 
