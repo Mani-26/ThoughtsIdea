@@ -28,6 +28,10 @@
 </head>
 
 <body>
+    <div class="background"></div>
+    <div id="loader">
+        <img src="lib/owlcarousel/assets/ajax-loader.gif" alt="Loading...">
+      </div>
     <header class="header">
         <a href="#" class="logo"><img src="./images/LOGO.jpg" loading="lazy" alt="LOGO"></a>
         <div class="fas fa-bars"></div>
@@ -832,7 +836,13 @@
             }
         }
     }
+     // Add a script to hide the loader once the page is fully loaded
+     window.addEventListener('load', function() {
+      var loader = document.getElementById('loader');
+      loader.style.display = 'none';
+    });
 </script>
+   
 
     <div class="footer">
         <div class="footer-top">
