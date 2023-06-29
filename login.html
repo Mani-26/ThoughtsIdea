@@ -10,6 +10,30 @@
     <link rel="stylesheet" href="./css/login.css">
 </head>
 
+<style>
+    /* Add your custom styles for responsiveness here */
+    @media (max-width: 600px) {
+        /* Styles for screens up to 600px width */
+        .button-container {
+            flex-direction: column;
+        }
+        .button-container2 {
+            margin-top: 20px;
+        }
+        .modal-content {
+            width: 80%;
+        }
+    }
+    @media (max-width: 400px) {
+        /* Styles for screens up to 400px width */
+        .modal-content {
+            width: 100%;
+        }
+    }
+</style>
+
+
+
 <body>
     <div class="button-container">
         <button class="centered-button" onclick="document.getElementById('id01').style.display='block'">Sign Up</button>
