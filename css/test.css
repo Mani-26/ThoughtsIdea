@@ -1064,7 +1064,7 @@ body {
     font-size: 44px;
     right: 15px;
     bottom: 15px;
-    transition: 0.3s;
+    transition:  0.3s;
     z-index: 9;
 }
 
@@ -1219,7 +1219,7 @@ button:hover::before {
         left: 0;
         height: auto;
         width: 100%;
-        background-color: rgb(231, 4, 4);
+        background-color: white;
         z-index: 1000;
         border-top: .1rem solid rgba(0, 0, 0, .3);
     }
@@ -1469,15 +1469,15 @@ button:hover::before {
 .search-container {
     display: flex;
     align-items: center;
-}
-
-.search-container input[type="text"] {
+  }
+  
+  .search-container input[type="text"] {
     padding: 6px 10px;
     border: none;
     border-radius: 4px;
-}
-
-.search-container button {
+  }
+  
+  .search-container button {
     display: flex;
     align-items: center;
     margin-left: 10px;
@@ -1486,9 +1486,9 @@ button:hover::before {
     border-radius: 4px;
     background-color: #4CAF50;
     color: white;
-}
-
-#loader {
+  }
+  
+  #loader {
     position: fixed;
     top: 0;
     left: 0;
@@ -1499,17 +1499,46 @@ button:hover::before {
     justify-content: center;
     align-items: center;
     z-index: 9999;
-}
+  }
+  
+  #loader img {
+    width: auto; /* Adjust the width as needed */
+    
+  }
 
-#loader img {
+.formC{
     width: auto;
+    height: auto;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 500px;
+    text-align: center;
+    background-color: rgb(72, 72, 90);
+    color: burlywood;
+    font-size: large;
 }
 
-.butt{
-    margin-left: 2rem;
-    border-radius: 30px;
-    background-color: rgb(243, 0, 0);
-    border-style: groove;
-    border-color: #002e5f;
-    cursor: pointer;
+.formC:hover{
+    border-radius: 35px;
+    background-color: rgb(41, 41, 212);
+    color: black;
+    text-shadow: 1px 1px white;
+    text-transform: uppercase; 
 }
+label{
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
+input{
+    border-radius: 30px;
+    padding: 5px;
+    margin: 5px;
+    color: rgb(245, 31, 31);
+}
+input:hover{
+    border-radius: 35px;
+    padding: 7px 30px;
+    background-color: rgb(153, 212, 216);
+}
+

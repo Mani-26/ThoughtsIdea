@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thoughts Idea</title>
-        <meta name="description" content="We offer a wide range of mini projects and main projects for students across all departments. Our custom project solutions are tailored to meet your academic requirements. Contact us today for expert assistance and successful project completion.">      
-    <link rel="stylesheet" href="./css/style.css">
+    <meta name="description"
+        content="We offer a wide range of mini projects and main projects for students across all departments. Our custom project solutions are tailored to meet your academic requirements. Contact us today for expert assistance and successful project completion.">
+    <link rel="stylesheet" href="./css/test.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="icon" href="./images/LOGO.jpg">
@@ -28,10 +29,10 @@
 </head>
 
 <body>
-    
+
     <div id="loader">
         <img src="lib/owlcarousel/assets/ajax-loader.gif" alt="Loading...">
-      </div>
+    </div>
     <header class="header">
         <a href="#" class="logo"><img src="./images/LOGO.jpg" loading="lazy" alt="LOGO"></a>
         <div class="fas fa-bars"></div>
@@ -115,7 +116,7 @@
                         <p>"Customized projects for all departments, delivering high-quality execution and academic
                             success. Partner with us to achieve excellence in your field and accomplish your project
                             goals." <br>
-                            <a href="projects.html#dept"><button class="button">Click here</button></a>
+                            <!-- <a href="projects.html#dept"><button class="button">Click here</button></a> -->
                         </p>
                     </div>
                 </div>
@@ -125,7 +126,7 @@
                         <h6 style="font-weight: 700;">Mini Projects </h6>
                         <p>"Excel in mini projects with our tailored solutions for academic success. Join us to
                             accomplish your project goals with high-quality execution and personalized guidance." <br>
-                            <a href="projects.html#pro-top"><button class="button">Click here</button></a>
+                            <!-- <a href="projects.html#pro-top"><button class="button">Click here</button></a> -->
                         </p>
                     </div>
                 </div>
@@ -135,12 +136,68 @@
                         <h6 style="font-weight: 700;">Specific Domain Projects </h6>
                         <p>"Achieve academic excellence in specific domain projects with our tailored solutions. Partner
                             with us to showcase your expertise and succeed in your chosen field." <br>
-                            <a href="projects.html#pro-dom"><button class="button">Click here</button></a>
+                            <!-- <a href="projects.html#pro-dom"><button class="button">Click here</button></a> -->
                         </p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <script>
+        function sendTelegramMessage() {
+          const telegramAPI = 'https://api.telegram.org/bot6123810495:AAFRm6x3dgr63kPveAii-3sE4-Gvu4fkPd0/sendMessage';
+      
+          const chatID = '-946655597';
+      
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const phone = document.getElementById('phone').value;
+          const proTitle = document.getElementById('proTitle').value;
+          const proDesc = document.getElementById('proDesc').value;
+          const dept = document.getElementById('dept').value;
+      
+          // Message to be sent to Telegram
+          const telegramMessage = `New Project Enquiry:\nName: ${name}\nEmail: ${email}\nDepartment: ${dept}\nProject Title: ${proTitle}\nProject Description: ${proDesc}`;
+      
+          // Send the message to Telegram using Fetch API
+          fetch(telegramAPI, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              chat_id: chatID,
+              text: telegramMessage,
+            }),
+          })
+            .then(response => {
+              if (!response.ok) {
+                throw new Error('Network response was not ok');
+              }
+              alert('Form submission successful! Thank you.');
+            })
+            .catch(error => {
+              alert('Form submission failed. Please try again later.');
+              console.error('Error:', error);
+            });
+        }
+      </script>
+    <div class="formC">
+        <form>
+            <!-- <label for="name"> Name</label> -->
+            <input type="text" id="name" name="Name" required placeholder="Name">
+            <!-- <label for="email"> Email</label> -->
+            <input type="email" id="email" name="Email" required placeholder="Email">
+            <!-- <label for="dept"> Department</label> -->
+            <input type="text" id="dept" name="Department" placeholder="Department" required>
+            <!-- <label for="phone"> Phone Number</label> -->
+            <input type="tel" id="phone" name="Phone" placeholder="Phone Number" required>
+            <!-- <label for="title">Project Title</label> -->
+            <input type="text" id="proTitle" name="Title" placeholder="Project Title" required>
+            <!-- <label for="desc">Project Description</label> -->
+            <input type="text" id="proDesc" name="desc" placeholder="Project Description" required>
+            <button class="button" type="button" onclick="sendTelegramMessage()">Submit</button>
+        </form>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -159,16 +216,16 @@
             </div>
             <div>
                 <i class="fas fa-gift fa-4x"></i>
-                <div class="counter" data-target="120">0</div>
+                <div class="counter" data-target="20">0</div>
                 <h3>Completed Projects</h3>
             </div>
             <div>
                 <i class="fas fa-users fa-4x"></i>
-                <div class="counter" data-target="480">0</div>
+                <div class="counter" data-target="40">0</div>
                 <h3>Happy Clients</h3>
             </div>
-        </div>
     </section>
+    </div>
     <section id="portfolio">
         <p style="margin: 20px;"><br></p>
     </section>
@@ -468,11 +525,11 @@
             document.getElementById('email').value = '';
             document.getElementById('message').value = '';
         }
-         // Add a script to hide the loader once the page is fully loaded
-     window.addEventListener('load', function() {
-      var loader = document.getElementById('loader');
-      loader.style.display = 'none';
-    });
+        // Add a script to hide the loader once the page is fully loaded
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('loader');
+            loader.style.display = 'none';
+        });
     </script>
 
 
@@ -617,9 +674,9 @@
     </div>
 
     <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
-     
-     
-    <script>
+
+
+    <!-- <script>
         var isLoggedIn = false;
 
         function getValueFromURL() {
@@ -628,7 +685,7 @@
             isLoggedIn = value === 'true';
         }
 
-        window.onload = function() {
+        window.onload = function () {
             getValueFromURL();
             if (!isLoggedIn) {
                 window.location.href = 'login.html';
@@ -636,9 +693,9 @@
                 console.log('User is logged in. Proceeding to the website...');
             }
         };
-    </script>
-    
-  
+    </script> -->
+
+
 </body>
 
 </html>
